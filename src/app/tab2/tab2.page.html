@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Get your movies !
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+<ion-card *ngFor="let filme of lista_filmes">
+ <ion-img [src]="'https://image.tmdb.org/t/p/w780'+filme.backdrop_path"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle>{{filme.release_date}}</ion-card-subtitle>
+    <ion-card-title>{{filme.title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+  {{filme.overview}}
+  </ion-card-content>
+</ion-card>
+</ion-content>
