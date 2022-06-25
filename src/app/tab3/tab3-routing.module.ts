@@ -7,10 +7,7 @@ const routes: Routes = [
     path: '',
     component: Tab3Page,
   },
-  {
-    path: 'cadastro',
-    loadChildren: () => import('../formcadastro/formcadastropage.module').then(m => m.FormCadastroPageModule)
-  },
+ 
 
 ];
 

@@ -18,7 +18,11 @@ const routes: Routes = [
       {
         path: 'tab3',
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-      },  
+      }, 
+      {
+        path: 'reg',
+        loadChildren: () => import('../formcadastro/FormCadastroPage.Module').then(m => m.FormCadastroPageModule)
+      } 
     ]
   },
   {

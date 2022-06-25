@@ -7,5 +7,5 @@ import { routes } from './formcadastro-routing.module';
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class FormCadastroPageModule {
+export class FormCadastroPageModule{
 }
