@@ -9,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  username:string = ""
+  password:string = ""
+
   constructor() {}
+
+  login(){
+    const { username, password} = this
+  }
 
 }

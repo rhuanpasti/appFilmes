@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-formcadastro',
+  selector: 'cadastro',
   templateUrl: './formcadastro.component.html',
   styleUrls: ['./formcadastro.component.scss'],
 })
