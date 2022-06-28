@@ -2,19 +2,23 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { FormcadastroComponent } from './auth/formcadastro/formcadastro.component';
 import { LoginComponent } from './auth/login/login.component';
+import { redirectUnauthorizedTo, redirectLoggedInTo, canActivate } from '@angular/fire/auth-guard';
+import { AuthService } from './auth/auth.service';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectLoggedInToHome = () => redirectLoggedInTo(['']);
 
 const routes: Routes = [
   {
-    path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
     path: '',
-    component: LoginComponent
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
+    ...canActivate(redirectUnauthorizedToLogin)
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    ...canActivate(redirectLoggedInToHome)
+    
   },
   {
     path: 'cadastro',

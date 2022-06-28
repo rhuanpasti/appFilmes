@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "authapp-ea4b0"
+  },
+  "targets": {
+    "authapp-ea4b0": {
+      "hosting": {
+        "app": [
+          "authapp-ea4b0"
+        ]
+      }
+    }
+  }
+}

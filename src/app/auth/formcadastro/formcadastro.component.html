@@ -7,31 +7,23 @@
 </ion-header>
 
 <ion-content>
-  <form>
-    <ion-item >
-      <ion-label position="floating">Nome</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Sobrenome</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
+  <form [formGroup]="credentials" >
     <ion-item>
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" formControlName="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Senha</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" formControlName="password" ></ion-input>
     </ion-item>
     <ion-row style="display: flex;align-items: center;align-content: center;text-align: center;">
       <ion-col>
-        <ion-button type="submit" expand="block">Logar</ion-button>
+        <ion-button type="submit" expand="block" (click)="register()">Registro </ion-button>
       </ion-col>
       <ion-col>
-        <a [routerLink]="['/login']" routerLinkActive="active" class="small-text" style="text-align: center;"> Já possuo uma conta! </a>
       </ion-col>
     </ion-row>
   </form>
+  <a [routerLink]="['/']" routerLinkActive="active" class="small-text" style="text-align: center;"> Já possuo uma conta! </a>
   
 </ion-content>
