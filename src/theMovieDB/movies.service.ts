@@ -15,4 +15,8 @@ export class MoviesService {
     return this.http.get(filmes);
   }
 
+  public getNowPlaying(page=1,language="en-US"){
+    let filmes=`${this.caminhoPadrao}/movie/now_playing?page=${page}&language=${language}&api_key=${this.chave}`
+    return this.http.get(filmes);
+  }
 }

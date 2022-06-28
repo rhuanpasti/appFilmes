@@ -14,12 +14,7 @@ import { MoviesService } from '../../theMovieDB/movies.service';
 
 
 export class Tab2Page {
-  public objetoFeed = {
-    subtitulo: "DESTINATION",
-    conteudo: "Founded in 1829 on an isthmus between Lake ...",
-    titulo: "Madison, Wstring",
-    imagem: "assets/madison.jpg"
-  };
+  
 
   constructor(public MovieService: MoviesService) { }
 

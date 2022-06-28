@@ -16,7 +16,7 @@ export class TabsPage {
   ) { }
 
   async logout() {
-    this.authService.logout();
+    await this.authService.logout();
     this.router.navigateByUrl('/login');
   }
 }
