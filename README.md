@@ -1,3 +1,3 @@
 # Movies App
-App android que faz uso de uma API para os filmes em alta no momento.
+App mobile que faz uso de uma API para os filmes em alta no momento.
 Autenticações feitas com firebase.
