@@ -17,6 +17,9 @@ $RECYCLE.BIN/
 log.txt
 npm-debug.log*
 
+.capacitor.config
+
+
 /.angular
 /.idea
 /.ionic
@@ -37,3 +40,4 @@ npm-debug.log*
 .firebase
 *-debug.log
 .runtimeconfig.json
+
